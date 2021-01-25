@@ -4,10 +4,6 @@
         <title>Daily Readings</title>
     </head>
     <body>
-
-        <outline title="Creativity" text="Creativity">
-            <outline title="Austin Kleon" xmlUrl="https://austinkleon.com/feed" type="rss" text="Austin Kleon"/>
-        </outline>
-
+        <outline title="Austin Kleon" xmlUrl="https://austinkleon.com/feed" type="rss" text="Austin Kleon"/>
     </body>
 </opml>
