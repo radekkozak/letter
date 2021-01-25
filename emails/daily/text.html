@@ -1,0 +1,10 @@
+{{#each feeds}}
+  # {{title}}
+  ## {{link}}
+---
+  {{#each items}}
+    - {{title}} : {{ link }}
+    {{contentSnippet}}
+  {{/each}}
+---
+{{/each}}
