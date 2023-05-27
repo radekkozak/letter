@@ -1,12 +1,15 @@
-<p align="center">
-  <img src="https://letter.radekkozak.com/assets/github-letter-logo.png" width="265" />
-</p>
+<div align="center">
+  <img src="https://letter.radekkozak.com/assets/letter-header.svg" width="75%" />
+<img src="assets/letter-cat.gif" width="75%" />
+  
+</div><br>
 
-## *rss-to-email* that delivers templated newsletter right into your inbox
+## Letter is a minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
+<br>
 
-**How this works ? Simple** ! Every day at 11 am app is run on the server via `cron` and fetches all RSS feeds from an
+**How this works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on the server via `cron` and fetches all RSS feeds from your
  OPML `subscriptions.xml` to check whether there is anything new from yesterday. After mapping feed items and
-  rendering from template, newsletter is created and sent via e-mail configuration defined in `.env` file.
+  rendering from template, newsletter digest is created and sent via e-mail configuration defined in `.env` file. All in a *cat-like* manner. And right into your inbox.
 
 ## Quick howto
 
@@ -14,39 +17,34 @@
     ```sh
     git clone https://github.com/radekkozak/letter.git
     ```
-
+   
 2. Install 
     ```sh
     npm install
     ```
-3. Create `.env` and `subscriptions.xml` from example files with your own configuration
+   
+3. Create `.env` and `subscriptions.xml` from example files with your own configuration<br><br>
 
 4. Run 
     ```sh
     node index.js
     ```
 
-## Environment variables
-
-| Key | Description | Default |
-|---|---|---|
-| OPML_SUBSCRIPTIONS_FILE| Name of the OPML file | subscriptions.xml |
-| EMAIL_FROM | Email sender | |
-| EMAIL_PASS | Email sender password | |
-| EMAIL_TO | Who will receive the e-mail | |
-| SMTP_HOST | SMTP host | |
-| SMTP_PORT | SMTP port | |
-| SMTP_SECURE | Is SMTP a secure connection | *true* for 465 port, *false* otherwise|
-
 ## Email newsletter template
 
-E-mail template is generated via `daily` template inside `emails` directory. You can make it your own as you please
+Letter uses [Handlebars](https://handlebarsjs.com) with html extension as default templating engine. Email template is generated from `daily` template inside `emails` directory.  You can make it your own as you please. Default settings assume the structure of `html`, `subject` and `text` html files. Here's how it looks by default:<br><br>
+
+<div align="center">
+    <img src="assets/letter-header-slogan.svg" width="475px" /><br>
+    <img src="assets/letter-cat.gif" width="475px" />
+    <img src="assets/letter-example.jpg" width="700px" height="630px" />
+</div>
 
 ## Important
 
-### OPML file
+### OPML file structure needs to be flat
 
-**OPML file structure needs to be flat**. See [subscriptions.xml.example](https://github.com/letter/rss/subscriptions.xml.example)
+Please see [subscriptions.xml.example](https://github.com/letter/rss/subscriptions.xml.example)
 
 ### Gmail considerations
 
@@ -62,3 +60,10 @@ As described, app is meant to be run at specific schedule. This can easily be ac
 ```shell script
 0 11 * * * node index.js
 ```
+## License
+
+Meow-what ? Reading cats don't need no stinking licenses. 
+
+## Cats and credits
+
+**I have tried hard to find original authors of cat gif and cat avatar used in the template and header**. I found those chucklesome pics sitting in my old computer folder one day and they sparked me to make this simple just-for-fun project. Funny enough i found myself using it for this day (What can i say - i just love my RSS readings delivered as email - i'm weird that way) Aaanywho - **if you are the original author of any of these lovely cats, please let me know** so i could give credit where credit is due.     
