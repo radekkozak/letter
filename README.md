@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://letter.radekkozak.com/assets/letter-header.svg" width="75%" />
+  <img src="https://letter.radekkozak.com/assets/letter-header-slogan.svg" width="75%" />
 <img src="assets/letter-cat.gif" width="75%" />
   
 </div><br>
