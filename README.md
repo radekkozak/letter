@@ -4,7 +4,7 @@
   
 </div><br>
 
-## Letter is a minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
+## a minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
 <br>
 
 **How this works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on the server via `cron` and fetches all RSS feeds from your
@@ -35,9 +35,7 @@
 Letter uses [Handlebars](https://handlebarsjs.com) with html extension as default templating engine. Email template is generated from `daily` template inside `emails` directory.  You can make it your own as you please. Default settings assume the structure of `html`, `subject` and `text` html files. Here's how it looks by default:<br><br>
 
 <div align="center">
-    <img src="assets/letter-header-slogan.svg" width="475px" /><br>
-    <img src="assets/letter-cat.gif" width="475px" />
-    <img src="assets/letter-example.jpg" width="700px" height="630px" />
+    <img src="assets/letter-example.jpg" width="800px" height="850px" />
 </div>
 
 ## Important
