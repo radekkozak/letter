@@ -55,13 +55,13 @@ As described, app is meant to be run at specific schedule. This can easily be ac
 . **Cron tab needs to be created separately by the user**. For example, below would run the app every day at 11 o'clock
  (server time)
 
-```shell script
+```bash
 0 11 * * * node index.js
 ```
 ## License
 
-Meow-what ? Reading cats don't need no stinking licenses. 
+Meow-what ? Cats don't need no stinking licenses. Just be good and state the source of the original cat [wink]. 
 
 ## Cats and credits
 
-**I have tried hard to find original authors of cat gif and cat avatar used in the template and header**. I found those chucklesome pics sitting in my old computer folder one day and they sparked me to make this simple just-for-fun project. Funny enough i found myself using it for this day (What can i say - i just love my RSS readings delivered as email - i'm weird that way) Aaanywho - **if you are the original author of any of these lovely cats, please let me know** so i could give credit where credit is due.     
+**I have tried hard to find original authors of cat gif and cat avatar used in the template and header**. I found those chucklesome pics sitting in my old computer folder one day and they sparked me to make this simple *why-not* weekend project. Funny enough i found myself using it for this day (What can i say - i just love my RSS readings delivered as email - i'm weird that way) Aaanywho - **if you are the original author of any of these lovely cats, please let me know** so i could give credit where credit is due.     
