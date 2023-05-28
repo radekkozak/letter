@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://letter.radekkozak.com/assets/letter-header-slogan.svg" width="75%" />
+  <img src="assets/letter-header-slogan.svg" width="75%" />
 <img src="assets/letter-cat.gif" width="75%" />
   
 </div><br>
@@ -7,9 +7,11 @@
 ## A minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
 <br>
 
-**How this works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on the server via `cron` and fetches all RSS feeds from your
- OPML `feeds.opml` to check whether there is anything new from yesterday. After mapping feed items and
-  rendering from template, newsletter digest is created and sent via e-mail configuration defined in `.env` file. All in a *cat-like* manner. And right into your inbox.
+**How this works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on 
+the server via `cron` and fetches all RSS feeds from your OPML `feeds.opml` to check whether 
+there is anything new from yesterday. After some mapping and rendering newsletter digest is created
+and sent via e-mail configuration defined in `.env` file. All in a *cat-like* manner. And right 
+into your inbox.
 
 ## Quick howto
 
@@ -24,7 +26,7 @@
     ```
    
 3. Create `.env` from example file with your own configuration. For your `feed.opml` file it is probably 
-   best to export your feeds from preferred service. OPML is de-facto standard for importing and exporting RSS feeds 
+   best to export feeds from your preferred service like Feedly or whatever. OPML is de-facto standard for importing and exporting RSS feeds 
    so it should be relatively easy. 
 
 4. Run 
