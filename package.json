@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "letter": "node index.js",
     "lint": "eslint -c .eslintrc --ext .js . --fix"
   },
   "dependencies": {
@@ -13,10 +14,6 @@
     "xml2js": "^0.6.0"
   },
   "devDependencies": {
-    "@types/email-templates": "^10.0.1",
-    "@types/node": "^20.2.5",
-    "@types/nodemailer": "^6.4.8",
-    "@types/xml2js": "^0.4.11",
     "eslint": "^8.41.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
