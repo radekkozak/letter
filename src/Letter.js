@@ -16,6 +16,9 @@ export async function run() {
   const rssItems = await getRssPostsFromYesterday(rssUrls);
   if (rssItems.length > 0) {
     await sendEmail(rssItems);
+    console.log("Good news! Letter just sent you some daily readings. Enjoy.")
+  } else {
+    console.log("No new readings for today. Sad face.")
   }
 }
 
