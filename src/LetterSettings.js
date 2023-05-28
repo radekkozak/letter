@@ -3,7 +3,7 @@ import {config} from 'dotenv';
 config();
 
 const settings = {
-  opml: (process.env.OPML_FEEDS || 'feeds.opml'),
+  opmlFile: (process.env.OPML_FEEDS || 'feeds.opml'),
   email: {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,

@@ -1,5 +1,7 @@
-import * as Letter from './src/Letter.js';
+import * as Letter from './src/Letter.js'
 
 (async () => {
-  await Letter.run()
+  Letter.run().catch(error => {
+    console.error("Letter encountered an error: " + error.message)
+  })
 })()
