@@ -1,18 +1,29 @@
-<p align="center" style="margin-left: -1em">
-  <img src="assets/letter-header-slogan.svg" width="50%" /> 
+<br>
+<p align="center">
+<picture>
+    <source media="(max-width: 640px)" srcset="assets/letter-header-slogan.svg" width="90%">
+    <img src="assets/letter-header-slogan.svg" alt="Letter header" width="50%">
+</picture>
 </p>
 <p align="center">
-<img src="assets/letter-cat.gif" width="40%" />
-</p><br>
+<picture>
+    <source media="(max-width: 640px)" srcset="assets/letter-cat.gif" width="70%">
+    <img src="assets/letter-cat.gif" alt="Letter cat" width="40%">
+</picture>
+</p>
+<br><br>
 
 ## A minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
+
 <br>
 
-**How this works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on 
+**How it works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on 
 the server via `cron` and fetches all RSS feeds from your OPML `feeds.opml` to check whether 
 there is anything new from yesterday. After some mapping and rendering newsletter digest is created
-and sent via e-mail configuration defined in `.env` file. All in a *cat-like* manner. And right 
+and sent via e-mail configuration defined in `.env` file. All in a *catsy* manner. And right 
 into your inbox.
+
+<br>
 
 ## Quick howto
 
@@ -35,7 +46,7 @@ into your inbox.
 
 2. Install
     ```sh
-    npm install
+    npm ci
     ```
 
 3. Rename `.env.example` to `.env` and add your own configuration there.
@@ -45,14 +56,14 @@ into your inbox.
     ```sh
     npm run letter
     ```
-or
 
-5. Run periodically
-As described, *letter* is meant to be run at specific schedule. This can easily be achieved via `cron` directive. **Cron tab needs to be created separately**. For example, below settings would run the app every day at 11 o'clock server time (assuming `npm` is correctly in your PATH) 
+5. OR run periodically
+As described, *letter* is meant to be run at specific schedule. This can easily be achieved via `cron` directive. **Cron tab needs to be created separately**. For example, below settings would run letter every day at 11 o'clock server time (assuming `npm` is correctly in your PATH) 
 
 ```bash
 0 11 * * * cd /fullpath/to/your/letter/folder && npm run letter
 ```
+<br>
 
 ## Email newsletter template
 
@@ -60,7 +71,7 @@ Letter uses [Handlebars](https://handlebarsjs.com) with html extension as defaul
 assumes the structure of `html`, `subject` and `text` html files. Here's how *letter* template looks by default:<br><br>
 
 <div align="center">
-    <img src="assets/letter-example.jpg" width="820" alt="Default Letter newsletter template"/>
+    <img src="assets/letter-example.jpg" width="830" alt="Default Letter newsletter template"/>
 </div>
 
 ## Notes
@@ -74,16 +85,6 @@ and categorized notations. Even in the same file. Please see [feeds.opml.example
 
 If you use Gmail for sending out the newsletter and your account has Two-Factor Authentication (2FA) enabled you 
 need to generate app-specific password which then can be used in place of your regular `EMAIL_PASS` variable in `.env` file.
-
-### Running app periodically
-
-As described, letter is meant to be run at specific schedule. This can easily be achieved via `cron` directive
-. **Cron tab needs to be created separately by the user**. For example, below settings would run the app every day 
-at 11 o'clock (server time)
-
-```bash
-0 11 * * * node index.js
-```
 
 ## License
 
