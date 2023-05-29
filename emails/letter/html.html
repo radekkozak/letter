@@ -173,7 +173,8 @@
                 </tr>
                 </tbody>
             </table>
-            {{#each feeds}}
+
+            {{#each letterFeeds}}
             <table class="stb-block" border="0" cellpadding="0" cellspacing="0"
                    style="overflow: hidden; margin: 0 auto; padding: 0; width:100%;max-width: 630px; clear: both;
                    background: none; border:0;" width="100%">
@@ -195,19 +196,19 @@
                                             font-weight: bold; font-size: 16px;">{{title}}</span>
                                     </div>
                                     <ul style="padding: 0; margin: 0 0 0 30px;">
+
                                         {{#each items}}
                                         <li style="padding: 10px 0">
                                             <div style="font-family: 'Gill Sans', sans-serif;font-weight: bold">
                                                 <a href="{{link}}"
-                                                   style="text-decoration:none;color: rgb(0, 0, 0);"
+                                                   style="text-decoration:none;color: #292c2f;"
                                                    target="_blank">{{title}}</a><br/></div>
                                             <div style="cursor:auto;color:#292c2f;font-family:Gill Sans, sans-serif;
                                             font-size:16px; font-weight:300; line-height:1.8; letter-spacing:0;
-                                            text-align:left; text-transform:none">{{ contentSnippet
-                                                }}
-                                            </div>
+                                            text-align:left; text-transform:none">{{ contentSnippet }}</div>
                                         </li>
                                         {{/each}}
+
                                     </ul>
                                 </td>
                             </tr>

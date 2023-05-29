@@ -1,27 +1,26 @@
 import RssParser from 'rss-parser'
 import { dirname, join } from 'path'
-import { OpmlParser } from './OpmlParser.js'
+import { getFeedsUrls } from './OpmlParser.js'
 import { fileURLToPath } from 'url'
-import Email from 'email-templates'
-import nodemailer from 'nodemailer'
 import { settings } from './LetterSettings.js'
+import { sendNewsletter } from './NewsLetter.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 export async function run () {
   const opmlFilePath = join(__dirname, '../rss', settings.opmlFile)
-  const rssUrls = await new OpmlParser().getFeedUrls(opmlFilePath)
+  const feedsUrls = await getFeedsUrls(opmlFilePath)
     .catch(error => {
-      throw new Error('Problem parsing feeds.opml. Please make sure it conforms to OPML format.'
+      throw new Error('Problem parsing `feeds.opml`. Please make sure it exists and conforms to OPML format.'
         + error.message)
     })
-  if (rssUrls !== undefined && rssUrls.length > 0) {
-    const rssItems = await getRssPostsFromYesterday(rssUrls).catch(error => {
+  if (feedsUrls !== undefined && feedsUrls.length > 0) {
+    const letterFeeds = await getFeedsPostsFromYesterday(feedsUrls).catch(error => {
       throw new Error('Problem getting RSS posts: ' + error.message)
     })
-    if (rssItems !== undefined && rssItems.length > 0) {
-      await sendEmail(rssItems)
+    if (letterFeeds !== undefined && letterFeeds.length > 0) {
+      await sendNewsletter(letterFeeds)
       console.log('Good news! Letter just sent you some daily readings. Enjoy.')
     } else {
       console.log('No new readings for today. Sad face.')
@@ -29,9 +28,9 @@ export async function run () {
   }
 }
 
-async function getRssPostsFromYesterday (rssUrls) {
+async function getFeedsPostsFromYesterday (feedsUrls) {
   const rssParser = new RssParser()
-  const promises = rssUrls.map(url => rssParser.parseURL(url))
+  const promises = feedsUrls.map(url => rssParser.parseURL(url))
   const successful = (await Promise.allSettled(promises)).filter(
     response => response.status === 'fulfilled')
 
@@ -54,43 +53,6 @@ async function getRssPostsFromYesterday (rssUrls) {
       return 1
     }
     return 0
-  })
-}
-
-async function sendEmail (feeds) {
-  const mailer = new Email({
-    preview: false,
-    send: true,
-    message: {
-      from: settings.email.from,
-    },
-    transport: nodemailer.createTransport({
-      host: settings.smtp.host,
-      port: parseInt(settings.smtp.port),
-      secure: settings.smtp.secure === 'true',
-      auth: {
-        user: settings.email.user,
-        pass: settings.email.pass,
-      },
-    }),
-    views: {
-      options: {
-        map: {
-          html: 'handlebars',
-        },
-        extension: 'html',
-      },
-    },
-  })
-  return mailer.send({
-    template: 'letter',
-    message: {
-      to: settings.email.to,
-    },
-    locals: {
-      feeds,
-      today: (new Date()).toDateString(),
-    },
   })
 }
 
