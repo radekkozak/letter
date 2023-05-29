@@ -1,9 +1,9 @@
 <p align="center" style="margin-left: -1em">
-  <img src="assets/letter-header-slogan.svg" width="40%" /> 
+  <img src="assets/letter-header-slogan.svg" width="50%" /> 
 </p>
 <p align="center">
 <img src="assets/letter-cat.gif" width="40%" />
-</p>
+</p><br>
 
 ## A minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
 <br>
@@ -60,7 +60,7 @@ Letter uses [Handlebars](https://handlebarsjs.com) with html extension as defaul
 assumes the structure of `html`, `subject` and `text` html files. Here's how *letter* template looks by default:<br><br>
 
 <div align="center">
-    <img src="assets/letter-example.jpg" width="820px" height="1150px" alt="Default Letter newsletter template"/>
+    <img src="assets/letter-example.jpg" width="820" alt="Default Letter newsletter template"/>
 </div>
 
 ## Notes
