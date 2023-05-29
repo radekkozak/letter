@@ -1,8 +1,8 @@
-name: Letter running every day at 11am
+name: Letter workflow
 
 on:
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "0 11 * * *" # everyday at 11am UTC
 
 env:
   OPML_FEEDS: ${{ secrets.OPML_FEEDS }}
@@ -24,6 +24,6 @@ jobs:
           node-version: '18'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Run Letter
         run: npm run letter --if-present
