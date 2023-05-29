@@ -2,7 +2,7 @@
   <img src="assets/letter-header-slogan.svg" width="40%" /> 
 </p>
 <p align="center">
-<img src="assets/letter-cat.gif" width="55%" />
+<img src="assets/letter-cat.gif" width="40%" />
 </p>
 
 ## A minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
