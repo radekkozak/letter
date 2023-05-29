@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes,width=device-width,height=device-height"/>
-    <meta name="description" content="Letter - your Daily Readings delivered to your inbox. Start your day with inspiration!"/>
+    <meta name="description"
+          content="Letter - your Daily Readings delivered to your inbox. Start your day with inspiration!"/>
     <meta name="twitter:title" content="Letter - your Daily Readings delivered to your inbox"/>
     <meta name="twitter:description" content="Start your day with inspiration!"/>
     <meta name="twitter:card" content="summary"/>
@@ -18,69 +19,73 @@
     <meta property="og:image" content="https://letter.radekkozak.com/assets/cat-avatar.png"/>
 
     <style>
-      @media only screen and (max-width: 640px) {
-        .stb-left-cell,
-        .stb-right-cell {
-          max-width: 100% !important;
-          width: 100% !important;
-        }
+        @media only screen and (max-width: 640px) {
+            #letter-header, #letter-cat {
+                width: 70% !important;
+            }
 
-        .stb-left-cell img,
-        .stb-right-cell img {
-          width: 100%;
-          height: auto;
-        }
+            .stb-left-cell,
+            .stb-right-cell {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
 
-        .stb-left-cell > div {
-          padding: 5px 10px !important;
-          box-sizing: border-box;
-        }
+            .stb-left-cell img,
+            .stb-right-cell img {
+                width: 100%;
+                height: auto;
+            }
 
-        .stb-right-cell > div {
-          padding: 5px 10px !important;
-          box-sizing: border-box;
-        }
+            .stb-left-cell > div {
+                padding: 5px 10px !important;
+                box-sizing: border-box;
+            }
 
-        .stb-cell-wrap {
-          padding: 0 0 0 0 !important;
-        }
+            .stb-right-cell > div {
+                padding: 5px 10px !important;
+                box-sizing: border-box;
+            }
 
-        .stb-cell-wrap > tr > td {
-          padding: 0 0 !important;
-        }
+            .stb-cell-wrap {
+                padding: 0 0 0 0 !important;
+            }
 
-        .stb-cell-wrap > tbody > tr > td {
-          padding: 0 0 !important;
-        }
+            .stb-cell-wrap > tr > td {
+                padding: 0 0 !important;
+            }
 
-        .stb-cell-wrap > tbody > tr > td.stb-text-box {
-          padding: 0 10px !important;
-        }
+            .stb-cell-wrap > tbody > tr > td {
+                padding: 0 0 !important;
+            }
 
-        .stb-left-cell > div.stb-text-box {
-          padding: 5px 10px !important;
-        }
+            .stb-cell-wrap > tbody > tr > td.stb-text-box {
+                padding: 0 10px !important;
+            }
 
-        .stb-right-cell > div.stb-text-box {
-          padding: 5px 10px !important;
-        }
+            .stb-left-cell > div.stb-text-box {
+                padding: 5px 10px !important;
+            }
 
-        .stb-container {
-          width: 100% !important
-        }
+            .stb-right-cell > div.stb-text-box {
+                padding: 5px 10px !important;
+            }
 
-        .stb-container * {
-          line-height: 1.8 !important;
-        }
+            .stb-container {
+                width: 100% !important
+            }
 
-        .stb-container a {
-          text-decoration: underline;
-        }
+            .stb-container * {
+                line-height: 1.8 !important;
+            }
 
-        .stb-cta-only-wrap {
-          padding: 10px 0 !important;
+            .stb-container a {
+                text-decoration: underline;
+            }
+
+            .stb-cta-only-wrap {
+                padding: 10px 0 !important;
+            }
         }
-      }
     </style>
 </head>
 <body>
@@ -101,10 +106,12 @@
                             <tbody>
                             <tr>
                                 <td style="padding: 0;" width="100%">
-                                    <div>
-                                        <p style="text-align: center; margin: 0 auto;width:100%"><img
-                                                src="https://letter.radekkozak.com/assets/letter-header.jpg"
-                                                style="width: 600; height: 190; display: inline; vertical-align: middle;
+                                    <div style="margin-top: 2rem">
+                                        <p id="letter-header" style="text-align: center; margin: 0 auto;width:100%">
+                                            <img srcset="https://letter.radekkozak.com/assets/letter-header2x.jpg 2x,
+                                            https://letter.radekkozak.com//assets/letter-header.jpg 1x"
+                                                 src="https://letter.radekkozak.com/assets/letter-header-small.jpg" width="358px"
+                                                 style="display: inline; vertical-align: middle;
                                                 max-width: 100%; border-width: 0; border-color: initial;
                                                 border-image: initial; text-align: justify; margin: 0 auto;">
                                         </p>
@@ -128,11 +135,13 @@
                             <tbody>
                             <tr>
                                 <td style="padding: 0 15px;" width="100%">
-                                    <div>
-                                        <p style="text-align: justify; margin: 0;width:100%"><img
-                                                src="https://letter.radekkozak.com/assets/letter-cat.gif" alt="Cat"
-                                                style="width: 100%; display: inline; vertical-align: middle; max-width: 100%; border-width: 0; border-color: initial; border-image: initial; text-align: justify;"
-                                                width="600"></p>
+                                    <div style="margin-top: 1.2rem;margin-bottom: 3rem">
+                                        <p id="letter-cat" style="text-align: center; margin: 0 auto;width:100%"><img
+                                                src="https://letter.radekkozak.com/assets/letter-cat.gif"
+                                                alt="Letter Cat" width="300"
+                                                style="display: inline; vertical-align: middle; max-width: 100%;
+                                                border-width: 0; border-color: initial; border-image: initial; text-align: justify;"
+                                        ></p>
                                     </div>
                                 </td>
                             </tr>
@@ -142,34 +151,7 @@
                 </tr>
                 </tbody>
             </table>
-            <table class="stb-block" border="0" cellpadding="0" cellspacing="0"
-                   style="overflow: hidden; margin: 0 auto; padding: 0; width:100%;max-width: 630px; clear: both; background: none;border:0;"
-                   width="100%">
-                <tbody>
-                <tr>
-                    <td style="padding: 0; line-height: 1.8; border-width: 0; font-size: 14px;">
-                        <table class="stb-cell-wrap" border="0" cellpadding="0" cellspacing="0"
-                               style="padding: 0 5px;" width="100%">
-                            <tbody>
-                            <tr>
-                                <td class="stb-text-box"
-                                    style="padding: 0 15px;mso-line-height-rule: exactly;line-height:1.8;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;font-size: 14px;font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif !important; color: #333333"
-                                    width="100%">
-                                    <div style="text-align: right;"><span
-                                            style="font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif; font-style: normal;"><span
-                                            style="color: rgb(93,87,87);">by </span><a
-                                            href="https://github.com/radekkozak/letter"
-                                            style="font-style: normal; font-weight: normal; text-decoration: none; color: #FF7E36; display: inline;"
-                                            class="link-edited" target="_blank">radekkozak</a></span></div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <br/><br/>
+
             <table class="stb-block" border="0" cellpadding="0" cellspacing="0"
                    style="overflow: hidden; margin: 0 auto; padding: 0; width:100%;max-width: 630px; clear: both; background: none;border:0;"
                    width="100%">
@@ -198,7 +180,8 @@
                 <tbody>
                 <tr>
                     <td style="padding: 15px 0 15px 0; line-height: 1.8; border-width: 0; font-size: 14px;">
-                        <table class="stb-cell-wrap" border="0" cellpadding="0" cellspacing="0" style="padding: 0 5px;"
+                        <table class="stb-cell-wrap" border="0" cellpadding="0" cellspacing="0"
+                               style="padding: 0 5px;"
                                width="100%">
                             <tbody>
                             <tr>
@@ -220,7 +203,8 @@
                                                    target="_blank">{{title}}</a><br/></div>
                                             <div style="cursor:auto;color:#292c2f;font-family:Gill Sans, sans-serif;
                                             font-size:16px; font-weight:300; line-height:1.8; letter-spacing:0;
-                                            text-align:left; text-transform:none">{{ contentSnippet }}
+                                            text-align:left; text-transform:none">{{ contentSnippet
+                                                }}
                                             </div>
                                         </li>
                                         {{/each}}
@@ -264,8 +248,10 @@
                     <td style="text-align:center; padding: 40px 0 40px 0;" class="sponsor">
                         <a href="https://github.com/radekkozak/letter" target="_blank"
                            style="text-decoration: none; color: rgb(51, 51, 51); display: inline;">
-                            <img src="https://letter.radekkozak.com/assets/cat-avatar.png" alt="Letter - Your Daily Readings"
-                                 border="0" style="width:97px;height:auto;vertical-align: text-top;border:0;"
+                            <img src="https://letter.radekkozak.com/assets/cat-avatar.png"
+                                 alt="Letter - Your Daily Readings"
+                                 border="0"
+                                 style="width:97px;height:auto;vertical-align: text-top;border:0;"
                                  width="97px"><br/><br/>
                             <p style="font-size: 13px;color:#333333;font-weight: normal;vertical-align: text-top;line-height: 1.25;margin:6px 0;padding:0;font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif;">
                                 © 2021-2023 Radek Kozak</p>

@@ -1,8 +1,9 @@
-<div align="center">
-  <img src="assets/letter-header-slogan.svg" width="75%" />
-<img src="assets/letter-cat.gif" width="75%" />
-  
-</div><br>
+<p align="center" style="margin-left: -1em">
+  <img src="assets/letter-header-slogan.svg" width="40%" /> 
+</p>
+<p align="center">
+<img src="assets/letter-cat.gif" width="55%" />
+</p>
 
 ## A minimalistic *cat-like* app that delivers a digest of your RSS feeds as templated newsletter.
 <br>
@@ -15,24 +16,43 @@ into your inbox.
 
 ## Quick howto
 
-1. Clone repository to desired location (for example your node server)
+- Letter assumes your personal `feeds.opml` in rss folder. You can create it manually from example or just export your feeds from your preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds
+  so it should be relatively easy. 
+
+### running automatically with Github Workflows
+
+1. Fork this repository to your Github account
+2. [Create repository secret variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets) with keys as seen in `.env.example` file and values of your own
+3. Rename `letter.yml.example` to `letter.yml` to enable Github Workflow running *letter* every day
+4. (optionally) Change cron time settings in `letter.yml` to your liking. By default *letter* will run at 11am UTC.
+   
+### running as Standalone on your server or local machine
+
+1. Clone repository to desired location
     ```sh
     git clone https://github.com/radekkozak/letter.git
     ```
-   
-2. Install 
+
+2. Install
     ```sh
     npm install
     ```
-   
-3. Create `.env` from example file with your own configuration. For your `feed.opml` file it is probably 
-   best to export feeds from your preferred service like Feedly or whatever. OPML is de-facto standard for importing and exporting RSS feeds 
-   so it should be relatively easy. 
 
-4. Run 
+3. Rename `.env.example` to `.env` and add your own configuration there.
+
+4. Run one time
+
     ```sh
-    node index.js
+    npm run letter
     ```
+or
+
+5. Run periodically
+As described, *letter* is meant to be run at specific schedule. This can easily be achieved via `cron` directive. **Cron tab needs to be created separately**. For example, below settings would run the app every day at 11 o'clock server time (assuming `npm` is correctly in your PATH) 
+
+```bash
+0 11 * * * cd /fullpath/to/your/letter/folder && npm run letter
+```
 
 ## Email newsletter template
 
@@ -40,7 +60,7 @@ Letter uses [Handlebars](https://handlebarsjs.com) with html extension as defaul
 assumes the structure of `html`, `subject` and `text` html files. Here's how *letter* template looks by default:<br><br>
 
 <div align="center">
-    <img src="assets/letter-example.jpg" width="870" height="1250" alt="Default Letter newsletter"/>
+    <img src="assets/letter-example.jpg" width="820px" height="1150px" alt="Default Letter newsletter template"/>
 </div>
 
 ## Notes
