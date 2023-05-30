@@ -30,6 +30,15 @@ jobs:
       - name: Build
         run: npm run build:release
 
+      - name: Zip Letter production files
+        run: zip -r letter.zip dist package*.json
+
+      - name: Upload Letter artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: letter
+          path: letter.zip
+
       - name: Update CHANGELOG
         id: changelog
         uses: requarks/changelog-action@v1
@@ -40,15 +49,6 @@ jobs:
           includeInvalidCommits: false
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
-
-      - name: Zip Letter production files
-        run: zip -r letter.zip dist/
-
-      - name: Upload Letter artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: letter
-          path: letter.zip
 
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
