@@ -5,14 +5,14 @@ on:
     - cron: "0 11 * * *" # everyday at 11am UTC
 
 env:
-  OPML_FEEDS: ${{ secrets.OPML_FEEDS }}
-  EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-  EMAIL_TO: ${{ secrets.EMAIL_TO }}
-  EMAIL_USER: ${{ secrets.EMAIL_USER }}
-  EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+  LETTER_FEEDS: ${{ secrets.LETTER_FEEDS }}
+  MAIL_TO: ${{ secrets.EMAIL_TO }}
+  SMTP_FROM: ${{ secrets.EMAIL_FROM }}
   SMTP_HOST: ${{ secrets.SMTP_HOST }}
   SMTP_PORT: ${{ secrets.SMTP_PORT }}
   SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+  SMTP_USERNAME: ${{ secrets.EMAIL_USER }}
+  SMTP_PASSWORD: ${{ secrets.EMAIL_PASS }}
 
 jobs:
   build:
