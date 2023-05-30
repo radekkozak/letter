@@ -28,11 +28,11 @@ and sent via e-mail. All in a *catsy* manner. And right into your inbox.
 
 - Letter assumes your personal `feeds.opml` or `feeds.txt` in rss folder. You can create either one manually or in case of OPML format you can also export your feeds from your preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds in such services so it should be relatively easy. Default file is `feeds.txt`. 
 
-### running full auto with Letter Template (easiest and preferred way)
+### Running automatically with Letter Template (easiest and recommeded way)
 
 You can receive your daily readings with Letter automatically by using this [Letter Template](https://github.com/radekkozak/letter-template). Just click **"Use this template"** button, set up required env variables and you're good to go. You can also adjust template to your liking.
    
-### running as Standalone on your server or local machine
+### Running standalone on your server or local machine
 
 1. Clone repository to desired location
     ```sh
