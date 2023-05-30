@@ -5,7 +5,7 @@
     "lib": ["ES2016"],
     "moduleResolution": "node16",
     "rootDir": "./src",
-    "outDir": "build",
+    "outDir": "dist",
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "alwaysStrict": true,

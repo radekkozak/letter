@@ -1,18 +1,17 @@
 {
-  "name": "node-typescript-boilerplate",
-  "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "name": "letter",
+  "description": "A minimalistic cat-like app that delivers a digest of your RSS feeds as templated newsletter",
   "private": true,
-  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "author": "Radek Kozak <dev@radekkozak.com>",
   "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">= 18.12 <19"
   },
   "scripts": {
-    "letter": "node build/index.js",
+    "letter": "node dist/index.js",
     "lint": "eslint . --ext .ts --ext .mts",
-    "clean": "rimraf build tmp",
+    "clean": "rimraf dist tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w -p tsconfig.json",
