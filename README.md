@@ -86,4 +86,4 @@ Meow-what ? Cats don't need no stinking licenses. Just be good and state the sou
 
 ## Cats and credits
 
-**I have tried hard to find original authors of cat gif and cat avatar used in the template and header**. I found those chucklesome pics sitting in my old computer folder one day and they sparked me to make this simple *why-not* weekend project. Funny enough i found myself using it for this day (What can i say - i just love my RSS readings delivered as email - i'm weird that way) Aaanywho - **if you are the original author of any of these lovely cats, please let me know** so i could give credit where credit is due.     
+**I have tried hard to find original authors of cat gif and cat avatar used in the template and header**. Long time ago i found those chucklesome pics sitting in my old computer folder one day and they sparked me to make this simple *why-not* weekend project. Funny enough i found myself using it for this day (What can i say - i just love my RSS readings delivered as email - i'm weird that way) Aaanywho - **if you are the original author of any of these lovely cats, please let me know** so i could give credit where credit is due.     
