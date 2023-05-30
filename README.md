@@ -27,15 +27,11 @@ into your inbox.
 
 ## Quick howto
 
-- Letter assumes your personal `feeds.opml` in rss folder. You can create it manually from example or just export your feeds from your preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds
-  so it should be relatively easy. 
+- Letter assumes your personal `feeds.opml` or `feeds.txt` in rss folder. You can create either one manually or in case of OPML format you can also export your feeds from your preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds in such services so it should be relatively easy. Default file is `feeds.txt`. 
 
-### running automatically with Github Workflows
+### running full auto with Letter Template (easiest and preferred way)
 
-1. Fork this repository to your Github account
-2. [Create repository secret variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets) with keys as seen in `.env.example` file and values of your own
-3. Rename `letter.yml.example` to `letter.yml` to enable Github Workflow running *letter* every day
-4. (optionally) Change cron time settings in `letter.yml` to your liking. By default *letter* will run at 11am UTC.
+You can receive your daily readings with Letter automatically by using available [Letter Template](https://github.com/radekkozak/letter-template). Just click **"Use this template"** button, set up required env variables and you're good to go. You can also adjust template to your liking.
    
 ### running as Standalone on your server or local machine
 
@@ -49,7 +45,7 @@ into your inbox.
     npm ci
     ```
 
-3. Rename `.env.example` to `.env` and add your own configuration there.
+3. Rename `.env.example` to `.env` and add your own configuration there. 
 
 4. Run one time
 
@@ -57,13 +53,12 @@ into your inbox.
     npm run letter
     ```
 
-5. OR run periodically
-As described, *letter* is meant to be run at specific schedule. This can easily be achieved via `cron` directive. **Cron tab needs to be created separately**. For example, below settings would run letter every day at 11 o'clock server time (assuming `npm` is correctly in your PATH) 
+5. OR run periodically : as described, *letter* is meant to be run at specific schedule. This can easily be achieved via `cron` directive. **Cron tab needs to be created separately**. For example, below settings would run letter every day at 11 o'clock server time (assuming `npm` is correctly in your PATH) 
 
-```bash
-0 11 * * * cd /fullpath/to/your/letter/folder && npm run letter
-```
-<br>
+    ```bash
+    0 11 * * * cd /fullpath/to/your/letter/folder && npm run letter
+    ```
+<br> 
 
 ## Email newsletter template
 
@@ -79,7 +74,7 @@ assumes the structure of `html`, `subject` and `text` html files. Here's how *le
 ### OPML file structure can be flat or nested
 
 Sometimes certain services like i.e Feedly, export OPML feeds in a nested manner. Letter supports both flat 
-and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/letter/rss/feeds.xml.example)
+and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/letter/rss/feeds.xml.example) . Don't forget to set `LETTER_FEEDS` to `opml` if you choose this format, so Letter knows what file you want it to pick. 
 
 ### Gmail considerations
 
