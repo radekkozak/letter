@@ -1,5 +1,25 @@
+# JetBrains IDEs
 .idea
 
-/node_modules
-npm-debug.log
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage
+
+# Transpiled files
+build/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Misc
 .DS_Store

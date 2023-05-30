@@ -1,16 +1,27 @@
 {
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2022,
-    "sourceType": "module"
+    "project": "tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2020
   },
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "browser": false
   },
-  "extends": "eslint:recommended",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "no-empty": "error",
     "no-multiple-empty-lines": "warn",
-    "no-var": "error"
+    "no-var": "error",
+    // https://typescript-eslint.io/rules/explicit-function-return-type/
+    "@typescript-eslint/explicit-function-return-type": "warn"
   }
 }
