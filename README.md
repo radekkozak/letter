@@ -18,10 +18,9 @@
 <br>
 
 **How it works? Simple!** Every day at 11 am (or at time of your choosing) *letter*  runs on 
-the server via `cron` and fetches all RSS feeds from your OPML `feeds.opml` to check whether 
+the server via `cron` and fetches all your precious RSS feeds to check whether 
 there is anything new from yesterday. After some mapping and rendering newsletter digest is created
-and sent via e-mail configuration defined in `.env` file. All in a *catsy* manner. And right 
-into your inbox.
+and sent via e-mail. All in a *catsy* manner. And right into your inbox.
 
 <br>
 
