@@ -29,7 +29,7 @@ and sent via e-mail. All in a *catsy* manner. And right into your inbox.
 
 ## Quick howto
 
-- Letter assumes your personal `feeds.opml` or `feeds.txt` in rss folder. You can create either one manually or in case of OPML format you can also export your feeds from your preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds in such services so it should be relatively easy. Default file is `feeds.txt`. 
+_Notice_: Letter assumes your personal `feeds.opml` or `feeds.txt` in `/rss` folder. You can create either one manually or in case of OPML format you can also export it from  preferred service (like Feedly or whatever). OPML is de-facto standard for importing and exporting RSS feeds in such services so it should be relatively easy. 
 
 ### Running automatically with Letter Template (easiest and recommeded way)
 
