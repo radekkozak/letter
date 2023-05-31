@@ -76,12 +76,12 @@ assumes the structure of `html`, `subject` and `text` html files. Here's how *le
 ### OPML file structure can be flat or nested
 
 Sometimes certain services like i.e Feedly, export OPML feeds in a nested manner. Letter supports both flat 
-and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/letter/rss/feeds.xml.example) . Don't forget to set `LETTER_FEEDS` to `opml` if you choose this format, so Letter knows what file you want it to pick. 
+and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/radekkozak/letter/blob/main/rss/feeds.opml.example) . Don't forget to set `LETTER_FEEDS` to `opml` if you choose this format, so Letter knows what file you want it to pick. 
 
 ### Gmail considerations
 
 If you use Gmail for sending out the newsletter and your account has Two-Factor Authentication (2FA) enabled you 
-need to generate app-specific password which then can be used in place of your regular `EMAIL_PASS` variable in `.env` file.
+need to generate app-specific password which then can be used in place of your regular `SMTP_PASSWORD` variable in `.env` file.
 
 ## License
 
