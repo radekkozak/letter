@@ -81,7 +81,7 @@ and categorized notations. Even in the same file. Please see [feeds.opml.example
 ### Gmail considerations
 
 If you use Gmail for sending out the newsletter and your account has Two-Factor Authentication (2FA) enabled you 
-need to generate app-specific password which then can be used in place of your regular `EMAIL_PASS` variable in `.env` file.
+need to generate app-specific password which then can be used in place of your regular `SMTP_PASSWORD` variable in `.env` file.
 
 ## License
 
