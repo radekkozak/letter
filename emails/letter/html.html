@@ -19,7 +19,32 @@
     <meta property="og:image" content="https://letter.radekkozak.com/assets/cat-avatar.png"/>
 
     <style>
+
+        :root {
+            --feed-title-color: #FF7E36;
+            --post-title-color: #292C2f;
+            --post-text-color: #292C2f;
+            --footer-text-color: #333333;
+            --letter-template-bg: #FFFFFF;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --feed-title-color: #FF7E36;
+                --post-title-color: #292C2f;
+                --post-text-color: #292C2f;
+                --footer-text-color: #333333;
+                --letter-template-bg: #FFFFFF;
+            }
+        }
+
+        #letter-template {
+            background: var(--letter-template-bg);
+            color: var(--post-title-color);
+        }
+
         @media only screen and (max-width: 640px) {
+
             #letter-header, #letter-cat {
                 width: 70% !important;
             }
@@ -89,8 +114,8 @@
     </style>
 </head>
 <body>
-<table class="stb-container" cellpadding="0" cellspacing="0" align="center"
-       style="margin: 0 auto; width: 94%; max-width: 640px; background: rgb(255, 255, 255); border: 0;">
+<table id="letter-template" class="stb-container" cellpadding="0" cellspacing="0" align="center"
+       style="margin: 0 auto; width: 94%; max-width: 640px; border: 0; color: var(--post-text-color);">
     <tbody>
     <tr style="margin: 0;padding:0;">
         <td style="width: 100%; max-width: 640px; margin: 0 auto; position: relative; border-spacing: 0; clear: both;
@@ -108,7 +133,7 @@
                                 <td style="padding: 0;" width="100%">
                                     <div style="margin-top: 2rem">
                                         <p id="letter-header" style="text-align: center; margin: 0 auto;width:100%">
-                                            <img srcset="https://letter.radekkozak.com/assets/letter-header2x.jpg 2x,
+                                            <img id="cat-header" srcset="https://letter.radekkozak.com/assets/letter-header2x.jpg 2x,
                                             https://letter.radekkozak.com//assets/letter-header.jpg 1x"
                                                  src="https://letter.radekkozak.com/assets/letter-header.jpg" width="430px"
                                                  style="display: inline; vertical-align: middle;
@@ -192,7 +217,7 @@
                                     font-size: 14px;font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif!important; color: #333333"
                                     width="100%">
                                     <div>
-                                        <span style="padding: 10px 0; font-style: normal; color: #FF7E36;
+                                        <span style="padding: 10px 0; font-style: normal; color: var(--feed-title-color);
                                             font-weight: bold; font-size: 16px;">{{title}}</span>
                                     </div>
                                     <ul style="padding: 0; margin: 0 0 0 30px;">
@@ -201,9 +226,9 @@
                                         <li style="padding: 10px 0">
                                             <div style="font-family: 'Gill Sans', sans-serif;font-weight: bold">
                                                 <a href="{{link}}"
-                                                   style="text-decoration:none;color: #292c2f;"
+                                                   style="text-decoration:none;color: var(--post-title-color);"
                                                    target="_blank">{{title}}</a><br/></div>
-                                            <div style="cursor:auto;color:#292c2f;font-family:Gill Sans, sans-serif;
+                                            <div style="cursor:auto;color:var(--post-text-color);font-family:Gill Sans, sans-serif;
                                             font-size:16px; font-weight:300; line-height:1.8; letter-spacing:0;
                                             text-align:left; text-transform:none">{{ contentSnippet }}</div>
                                         </li>
@@ -248,13 +273,13 @@
                 <tr>
                     <td style="text-align:center; padding: 40px 0 40px 0;" class="sponsor">
                         <a href="https://github.com/radekkozak/letter" target="_blank"
-                           style="text-decoration: none; color: rgb(51, 51, 51); display: inline;">
-                            <img src="https://letter.radekkozak.com/assets/cat-avatar.png"
+                           style="text-decoration: none; display: inline;">
+                            <img id="cat-avatar" src="https://letter.radekkozak.com/assets/cat-avatar.png"
                                  alt="Letter - Your Daily Readings"
                                  border="0"
                                  style="width:97px;height:auto;vertical-align: text-top;border:0;"
                                  width="97px"><br/><br/>
-                            <p style="font-size: 13px;color:#333333;font-weight: normal;vertical-align: text-top;line-height: 1.25;margin:6px 0;padding:0;font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif;">
+                            <p style="font-size: 13px; color: var(--footer-text-color) ;font-weight: normal;vertical-align: text-top;line-height: 1.25;margin:6px 0;padding:0;font-family: AppleSDGothic, apple sd gothic neo, noto sans korean, noto sans korean regular, noto sans cjk kr, noto sans cjk, nanum gothic, malgun gothic, dotum, arial, helvetica, MS Gothic, sans-serif;">
                                 © 2021-2023 Radek Kozak</p>
                         </a></td>
                 </tr>
