@@ -33,7 +33,7 @@ _Notice_: Letter assumes your personal `feeds.opml` or `feeds.txt` in `/rss` fol
 
 ### Running automatically with Letter Template (easiest and recommeded way)
 
-You can receive your daily readings with Letter automatically by using this [Letter Template](https://github.com/radekkozak/letter-template). Just click **"Use this template"** button, set up required env variables and you're good to go. You can also adjust template to your liking.
+You can receive your daily readings with Letter automatically by using this [Letter Template](https://github.com/radekkozak/letter-template). Just set up required environment variables and you're good to go. You can also adjust newsletter look to your liking.
    
 ### Running standalone on your server or local machine
 
