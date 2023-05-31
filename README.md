@@ -22,6 +22,9 @@ the server via `cron` and fetches all your precious RSS feeds to check whether
 there is anything new from yesterday. After some mapping and rendering newsletter digest is created
 and sent via e-mail. All in a *catsy* manner. And right into your inbox.
 
+![Letter Status](https://img.shields.io/github/actions/workflow/status/radekkozak/letter/build.yml?branch=main&label=build&logo=letter&style=flat-square)
+![Latest Letter release](https://img.shields.io/github/v/release/radekkozak/letter?sort=semver&style=flat-square)
+
 <br>
 
 ## Quick howto
