@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Set up Node
         uses: actions/setup-node@v3
@@ -44,7 +46,7 @@ jobs:
         uses: requarks/changelog-action@v1
         with:
           useGitmojis: false
-          reverseOrder: false
+          reverseOrder: true
           excludeTypes: build,docs,style,chore
           includeInvalidCommits: false
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -67,6 +69,5 @@ jobs:
         with:
           branch: main
           push_options: --force
-          token: ${{ secrets.PAT }}
           commit_message: 'docs: Update CHANGELOG.md for ${{ github.ref_name }} [skip ci]'
           file_pattern: CHANGELOG.md
