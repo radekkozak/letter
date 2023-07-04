@@ -34,5 +34,13 @@
     "rimraf": "~5.0",
     "ts-api-utils": "~0.0.44",
     "typescript": "~5.0"
+  },
+  "overrides": {
+    "eslint-plugin-node": {
+      "semver": "7.5.3"
+    },
+    "eslint-plugin-import": {
+      "semver": "7.5.3"
+    }
   }
 }
