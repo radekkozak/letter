@@ -66,5 +66,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: main
+          push_options: --force
+          token: ${{ secrets.PAT }}
           commit_message: 'docs: Update CHANGELOG.md for ${{ github.ref_name }} [skip ci]'
           file_pattern: CHANGELOG.md
