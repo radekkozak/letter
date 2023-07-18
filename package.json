@@ -41,6 +41,9 @@
     },
     "eslint-plugin-import": {
       "semver": "7.5.3"
+    },
+    "cross-spawn": {
+      "semver": "7.5.3"
     }
   }
 }
